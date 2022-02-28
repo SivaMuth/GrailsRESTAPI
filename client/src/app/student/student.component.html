@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Student List
+    <a [routerLink]="['/student-create']" class="btn btn-default btn-lg">
+      (Add Student)
+    </a>
+  </h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>City</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let stud of students">
+        <td>{{ stud.firstname }}</td>
+        <td>{{ stud.lastname }}</td>
+        <td>{{ stud.email }}</td>
+        <td>{{ stud.age }}</td>
+        <td>{{ stud.city }}</td>
+        <td><a [routerLink]="['/student-details/',stud.id]">Show Details</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

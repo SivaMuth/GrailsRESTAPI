@@ -1,0 +1,27 @@
+<div class="container">
+  <!-- <h1>{{ student.name }}</h1>  -->
+  <dl class="list">
+    <dt>FirstName</dt>
+    <dd>{{ student.firstname }}</dd>
+    <dt>LastName</dt>
+    <dd>{{ student.lastname }}</dd>
+    <dt>Email</dt>
+    <dd>{{ student.email }}</dd>
+    <dt>Age</dt>
+    <dd>{{ student.age }}</dd>
+   <!--  <dt>Address</dt>
+    <dd>{{ student.address }}</dd>  -->
+    <dt>City</dt>
+    <dd>{{ student.city }}</dd>
+  <!--  <dt>Postal Code</dt>
+    <dd>{{ student.postalCode }}</dd>
+    <dt>Phone Number</dt>
+    <dd>{{ student.phone }}</dd>  -->
+  </dl>
+  <div class="row">
+    <div class="col-md-12">
+      <a [routerLink]="['/student-edit', student.id]" class="btn btn-success">EDIT</a>
+      <button class="btn btn-danger" type="button" (click)="deleteStudent(student.id)">DELETE</button>
+    </div>
+  </div>
+</div>
